@@ -1,0 +1,717 @@
+@charset utf-8;
+/*
+Theme Name: Foxtrot
+Theme URI: http://josemdev.com/blog/
+Author: José M. Gilgado
+Author URI: http://josemdev.com/blog/
+Description: Simple and clean theme, 2 columns.
+Version: 1.0
+
+ * Built on the Whiteboard Framework
+ * http://whiteboardframework.com
+ */
+
+ @charset utf-8;
+
+ /*
+ general styles
+ */
+
+.serif, cite, blockquote, h1, h2, h3, h4, h5, h6 {
+	font-family: helvetica,arial,freesans,clean,sans-serif;
+	font-weight: normal;
+}
+
+.monospace, var, code {
+	font-family: courier new, courier, monospace;
+}
+
+.amp {
+	font-style: italic;
+	font-family: baskerville,palatino,palatino linotype,book antiqua,georgia,times,times new roman,serif;
+	font-weight: normal;
+}
+
+a:link, a:visited {
+	color: #268cbb;
+}
+
+a:hover,a:active {
+	text-decoration: underline;
+}
+
+.post-content ul, .post-content ol {
+	padding-left: 24px;
+	padding-bottom: 10px;
+}
+
+blockquote {
+	border-top: 1px #ccc dotted;
+	border-bottom: 1px #ccc dotted;
+	text-align: justify;
+	margin: 20px;
+	padding: 12px;
+}
+blockquote:first-letter {
+	font-size: 24px;
+	padding-right: 1px;
+}
+blockquote:first-line {
+	font-size: 20px;
+}
+
+.hide { /* this class is used to hid the skip to content link at the beginning of the document for accessibility */
+ display: none;
+}
+
+.clear {
+ clear: both;
+}
+
+.left {
+ float: left;
+}
+
+.right {
+ float: right;
+}
+
+
+ /*---------------------------------------------------------------
+ ------------------------ LAYOUT STYLES --------------------------
+ ---------------------------------------------------------------*/
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+body {
+	color: #111;
+	background: url("images/bg-header.png") repeat-x scroll 0 0 #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 145%;
+}
+
+*::selection {
+	background: #fff2a8;
+	color: #000;
+}
+*::-moz-selection {
+	background: #fff2a8;
+	color: #000;
+}
+
+.container {
+	background: #fff;
+	width: 920px;
+}
+
+.normal, body, #content h3 {
+	text-shadow: none; 
+	-webkit-text-shadow: none; 
+	-moz-text-shadow: none; 
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -87px;
+	width: 920px;
+}
+
+#header {
+	padding-bottom: 55px;
+	position: relative;
+}
+
+#title {
+  float: left;
+	padding-top: 23px;
+}
+
+#logo, #tagline { }
+
+#logo {
+	letter-spacing: 0;
+	line-height: 50px;
+	font-size: 39px;
+	font-weight: bold;
+}
+
+#logo a {
+	color: #000;
+	font-size: 39px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+#tagline {
+	font-size: 15px;
+	line-height: 12px;
+	color: #ABABAB;
+}
+
+#header-image.container {
+	padding: 0;
+}
+
+#nav-primary {
+  color: #666666;
+  font-size: 14px;
+  font-style: italic;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 27px;
+  vertical-align: middle;
+  width: 320px;
+}
+
+#nav-primary ul, #nav-primary li {
+	list-style: none;
+}
+
+#nav-primary a {
+}
+
+#widget-header {
+	clear: both;
+}
+
+label.screen-reader-text {
+	display:block;
+}
+
+#content {
+	width: 666px;
+	padding: 0px;
+}
+
+#main .container {
+	background: none;
+}
+
+
+li {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+div.post-content {
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 25px;
+}
+
+/*---------------------------------------------------------------
+-------------------------- NAVIGATION ---------------------------
+---------------------------------------------------------------*/
+nav.oldernewer {
+	display: inline-block;
+	font-size: 18px;
+	padding: 11px 0 30px;
+	text-align: center;
+	width: 100%;
+}
+.older {
+	float: left;
+}
+.newer {
+	float: right;
+}
+
+
+ /*---------------------------------------------------------------
+ ----------------------------- INDEX ------------------------------
+ ---------------------------------------------------------------*/
+a.more-link {
+	font-style: italic;
+}
+
+p.read_more_wrapper {
+	text-align: right;
+}
+
+.marks {
+	color: #DDDDDD;
+  float: left;
+  font-family: georgia,serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 20px 3px 0;
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+
+.quote {
+ border-bottom: 1px solid #DDDDDD;
+ padding-top: 25px;  
+ padding-bottom: 25px;
+ margin-bottom: 25px;
+ position: relative;
+}
+
+.quote p {
+ margin: 16px 0 24px 70px
+}
+
+.author_quote {
+	bottom: 6px;
+	color: #B0ACAC;
+	font-weight: 700;
+	position: absolute;
+	right: 9px;
+}
+
+ /*---------------------------------------------------------------
+ ----------------------------- POST ------------------------------
+ ---------------------------------------------------------------*/
+
+.post {
+	margin-bottom: 20px;
+}
+
+/* Post Title */
+.single-post h1 a, .archive h2 a, .page h1 { 
+	color: #000;
+	font-size: 31px !important;
+	font-weight: bold;
+	line-height: 29px !important;
+}
+
+.single-post h1 {
+	line-height: 39px !important;
+}
+
+.post-content p {
+	line-height: 1.5em;
+	margin: 1em 0;
+	 width: 100%;
+
+}
+.post-content .date, .single-post .date {
+	font-size: 13px;
+	color: #ABABAB;
+	margin: 0 0 15px;
+
+}
+
+/*  Headers in post. h1 is used for the title, 
+    so the content should have only h2, h3, h4... */
+.post h2, .post h3, .post h4, .post h5, .post h6 {
+	margin: 24px 0px 12px 0px;
+}
+
+.post div.post-content h2 {
+	font-size: 18px;
+}
+
+blockquote {
+	background-color: #F5F5F5;
+}
+
+blockquote p {
+	display: inline-block;
+	font-size: 15px;
+}
+
+#post-meta {
+	font-size: 18px;
+}
+
+p.wp-caption-text {
+  color: #ababab;
+  font-size: 13px;
+  line-height: 0;
+  margin: 10px 0 20px;
+}
+
+
+ /*---------------------------------------------------------------
+ ------------------------ COMMENTS -------------------------------
+ ---------------------------------------------------------------*/
+#comments {
+  margin-bottom: 30px;
+}
+
+input[type=text], textarea { 
+  border: 1px #aaa solid;
+  padding: 6px;
+  outline: none;
+  border-radius: 2px 2px 2px 2px; 
+  -moz-border-radius: 2px 2px 2px 2px; 
+  -webkit-border-radius: 2px 2px 2px 2px; 
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #C9C9C9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, -5px -5px 0 0 #F5F5F6, 5px 5px 0 0 #F5F5F6, 5px 0 0 0 #F5F5F6, 0 5px 0 0 #F5F5F6, 5px -5px 0 0 #F5F5F6, -5px 5px 0 0 #F5F5F6;
+  color: #545658;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+ 	background: none repeat scroll 0 0 #FFFFFF;
+ 	border: 1px solid #C9C9C9;
+ 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, -5px -5px 0 0 #F5F5F6, 5px 5px 0 0 #F5F5F6, 5px 0 0 0 #F5F5F6, 0 5px 0 0 #F5F5F6, 5px -5px 0 0 #F5F5F6, -5px 5px 0 0 #F5F5F6; 
+ 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, -5px -5px 0 0 #F5F5F6, 5px 5px 0 0 #F5F5F6, 5px 0 0 0 #F5F5F6, 0 5px 0 0 #F5F5F6, 5px -5px 0 0 #F5F5F6, -5px 5px 0 0 #F5F5F6; 
+ 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, -5px -5px 0 0 #F5F5F6, 5px 5px 0 0 #F5F5F6, 5px 0 0 0 #F5F5F6, 0 5px 0 0 #F5F5F6, 5px -5px 0 0 #F5F5F6, -5px 5px 0 0 #F5F5F6; 
+ 	color: #545658;
+}
+
+textarea {
+  min-height: 150px;
+ 	width: 500px;
+}
+
+#commentform p {
+	margin-bottom: 20px;
+}
+
+#commentform {
+	font-size: 16px;
+}
+
+.contactform #submit-button, #commentform #submit-button {
+  border: medium none;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  width: auto;
+}
+
+#commentform input {
+	margin-right: 14px;
+}
+
+#commentform {
+   width: 100%;
+}
+
+#commentform textarea {
+   width: 80%;
+}
+
+#commentform input[type=text] {
+   width: 250px;
+}
+
+.comment-author cite {
+   font-weight: bold;
+}
+
+.comment-meta {
+	font-size: 13px;
+	color: #ababab;
+}
+
+div.comment {
+	padding: 15px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+div.gravatar img {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-bottom: 1px solid #D7D7D7;
+	border-left: 1px solid #F2F2F2;
+	border-right: 1px solid #F2F2F2;
+	float: left;
+	height: auto;
+	padding: 3px;
+	width: 38px;
+	margin-top: 3px;
+}
+
+div.comment-text, div.comment-meta {
+	margin: 0 0 0 61px;	
+}
+div.comment-meta {
+	line-height: 2em;
+}
+
+div.comment span.name {
+	font-size: 18px;
+	color: #111;
+	font-weight: bold;
+}
+
+#comments ul {
+	margin-bottom: 20px;
+}
+
+#comments-form h3 {
+	padding-bottom: 15px;
+}
+
+.comment-text p {
+	margin: 1em 0;	
+}
+ 
+#trackbacks {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+ 
+/*---------------------------------------------------------------
+------------------------- ARCHIVES ------------------------------
+---------------------------------------------------------------*/
+div.archives {
+	background-color: #F5F5F5;
+ border-bottom: 1px dotted #CCCCCC;
+ border-top: 1px dotted #CCCCCC;
+ margin-bottom: 20px;
+ padding: 12px;
+ text-align: justify;
+}
+
+.archive h2 a {
+	font-size: 25px;
+}
+
+.archive .single-post {
+ border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+}
+
+div.archives h1 {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 18px;
+}
+
+
+#smart-archives-list {
+	margin-bottom: 38px;
+  padding-top: 9px;
+}
+
+#smart-archives-list h2 {
+	  padding-top: 15px;
+}
+
+#smart-archives-list h2 a {
+	 color: #111111;
+}
+
+ /*---------------------------------------------------------------
+ -------------------------- CATEGORY ------------------------------
+ ---------------------------------------------------------------*/
+
+.category div.post-content {
+  border: none;
+  margin-bottom: 0;
+}
+
+.category .single-post {
+	padding-bottom: 0;
+} 
+
+.category-header {
+  background-color: #EEEEEE;
+  border: 1px solid #268CBB;
+  font-size: 29px !important;
+  line-height: 35px !important;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+
+ /*---------------------------------------------------------------
+ -------------------------- SIDEBAR ------------------------------
+ ---------------------------------------------------------------*/
+#sidebar {
+	border-left: 4px solid #E6E6E6;
+	width: 220px;
+	padding: 0 0 0 12px;
+}
+
+#recent li {
+	padding-bottom: 5px !important;
+}
+
+#sidebar .widget-area {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px #dedede solid;
+}
+
+#sidebar h3 {
+	margin-top: 15px;
+	margin-bottom: 4px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#siebar ul, #sidebar li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#sidebar .children {
+	padding-left: 10px;
+}
+
+#sidebar .children .children {
+	padding-left: 10px;
+}
+
+#sidebar #twitter {
+	padding-top: 5px;
+} 
+
+#sidebar .link_archives {
+	font-style: italic;
+}
+
+
+/*---------------------------------------------------------------
+--------------------------- FOOTER ------------------------------
+---------------------------------------------------------------*/
+
+#footer {
+	background: none repeat scroll 0 0 #F1F1F1;
+	border-top: 2px solid #DDDDDD;
+	font-size: 12px;
+}
+
+#footer, .push {
+  height: 85px;
+	clear: both;
+}
+
+#footer-content {
+	margin: -23px auto 0;
+ position: relative;
+ top: 50%;
+ width: 920px;
+}
+
+#footer-content p {
+	float: left;
+	line-height: 1em;
+}
+
+#footer ul, #footer li {
+	display: inline;
+	list-style: none;
+}
+
+#footer li a {
+	padding: 0 10px;
+}
+
+
+
+ /*13-column layout
+ 60 px columns, 24 px gutters, 72 px margins, 1212 px total (extra space for scrollbars)
+ ---------------------------------------------------------------------------------------
+ 1     2      3      4      5      6      7      8      9      10     11     12     13
+ 60px  144px  228px  312px  396px  480px  564px  648px  732px  816px  900px  984px  1068px	*/
+
+@media only screen and (min-width: 1212px) {
+	.container { }
+	#content { }
+	#sidebar { }
+}
+
+
+ /*5-column layout
+ 60 px columns, 24 px gutters, 42 px margins, 480 px total
+ ---------------------------------------------------------
+ 1     2      3      4      5
+ 60px  144px  228px  312px  396px	*/
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	.container { }
+
+	#logo, #tagline {
+		position: relative;
+		line-height: 30px;
+	}
+
+	#logo {
+		font-size: 42px;
+	}
+
+	#content {
+		float: none;
+	}
+
+	#sidebar {
+		float: none;
+		background: #eee;
+		margin-left: -42px;
+		margin-right: -42px;
+		padding-left: 52px;
+		padding-right: 52px;
+		width: 376px;
+		border-bottom: 1px #ccc solid;
+	}
+
+	#footer .container {
+		padding-top: 0;
+	}
+
+	#footer-content {
+		border: 0;
+		padding: 10px;
+	}
+}
+
+
+ /*3-column layout
+ 60 px columns, 24 px gutters, 46 px margins, 320 px total
+ ---------------------------------------------------------
+ 1     2      3
+ 60px  144px  228px	*/
+
+@media only screen and (max-width: 479px) {
+	.container { }
+
+	#logo, #tagline {
+		position: relative;
+		line-height: 30px;
+	}
+
+	#logo {
+		font-size: 42px;
+	}
+
+	#tagline {
+		font-size: 16px;
+	}
+
+	#content {
+		float: none;
+	}
+
+	#sidebar {
+		float: none;
+		background: #eee;
+		margin: -42px 0;
+		padding: 0 52px;
+		width: 212px;
+		border-bottom: 1px #ccc solid;
+	}
+
+	#footer .container {
+		padding-top: 0;
+	}
+
+	#footer-content {
+		border: 0;
+		padding: 10px;
+	}
+
+}
+ 
