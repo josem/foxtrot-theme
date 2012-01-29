@@ -19,7 +19,7 @@
 			<li id="recent" class="widget">
 				<h3>Recent articles</h3>
 				<ul>
-				<? foreach( $recent_posts as $post ){
+				<?php foreach( $recent_posts as $post ){
 							echo '<li><a href="' . get_permalink($post["ID"]) . '" title="'.$post["post_title"].'" >' .   $post["post_title"].'</a> </li> ';
 						} ?>
 				</ul>

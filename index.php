@@ -1,17 +1,17 @@
 <?php get_header(); ?>
 	<div id="content">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<? $post_type = get_post_type( $post->ID ); ?>
+		<?php $post_type = get_post_type( $post->ID ); ?>
 		
-			<? if ($post_type == 'cita'): ?>
+			<?php if ($post_type == 'cita'): ?>
 				<div class="single-post quote">
 					<div class="marks"> 
-						<img src="<? echo  get_stylesheet_directory_uri() . '/images/icon-quote.gif'; ?>" alt="" />
+						<img src="<?php echo  get_stylesheet_directory_uri() . '/images/icon-quote.gif'; ?>" alt="" />
 					</div> 
 
 					<?php the_content(__( '[Read more &rarr;]', 'wpml_theme')); ?>
 				</div>
-		<? else: ?>
+		<?php else: ?>
 		
 			<div class="single-post">
 				<h1>
@@ -28,7 +28,7 @@
 				<div class="post-meta">
 				</div><!--.postMeta-->
 			</div><!--.single-post-->
-		<? endif; ?>
+		<?php endif; ?>
 		<?php endwhile; else: ?>
 			
 			<div class="no-results">
