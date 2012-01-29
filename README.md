@@ -5,7 +5,7 @@ It's very clean and simple, supports widgets and it works with the latest versio
 I've put all the effort into the readibility of the posts without using serif-fonts (I think they are too serious with this design).
 
 ## Demo.
-Working on that :)
+[http://foxtrot.josemdev.com/](http://foxtrot.josemdev.com/) (Adding more content soon)
 
 ## Author
 
